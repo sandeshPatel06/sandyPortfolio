@@ -72,6 +72,17 @@
 
         }
 
+        .leftsection .btn {
+            padding: 12px;
+            background-color: rgb(91, 105, 232);
+            border: 2px solid;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+
+        }
+
         .rightsection img {
             width: 80%;
             margin: 50px 0;
@@ -134,19 +145,38 @@
             font-size: 9px;
         }
 
-        .footer {
-            padding: auto;
-            justify-content: space-around;
+        footer {
+            background-color: #0c0c1a;
+
+            color: white;
+            justify-content: space-evenly;
+            margin-top: 300px;
         }
 
-       
-        
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            list-style: none;
+            justify-content: space-evenly;
+
+        }
+
+        .footer>div {
+            width: 122px;
+
+        }
+
 
         main hr {
             border: 0;
             background: #9c97f1;
             height: 1.2px;
             margin: 40px 84px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
         }
     </style>
 </head>
@@ -172,7 +202,12 @@
             <div class="leftsection">
                 Hi, My name is <span class="purple">sandy</span>
                 <div>
-                    and i am a passionate <span id="element"></span>
+                    and i am a passionate
+                    <span id="element"></span>
+                </div>
+                <div class="buttons">
+                    <button class="btn" >Download Resume</button>
+                    <button class="btn">Visit Github</button>
                 </div>
             </div>
             <div class="rightsection">
@@ -245,29 +280,39 @@
         </section>
 
     </main>
-
     <footer>
         <div class="footer">
-            <div class="footer-first">
-                <h3>
-                    sandy's portfolio Website
-                </h3>
-            </div>
-            <div class="services">
-               
-
-            <div class="footer-second/">
-               
-    
+            <div class="footer-first">Sandy's portfolio Website</div>
+            <div class="footer-second">
+                <ul>
+                    <li>home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>contect me</li>
+                </ul>
             </div>
             <div class="footer-third">
-
-                 
+                <ul>
+                    <li>home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>contect me</li>
+                </ul>
+            </div>
             <div class="footer-fourth">
-               
+                <ul>
+                    <li>home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>contect me</li>
+                </ul>
             </div>
         </div>
+        <div class="footer-rights">
+            copyritght &#169; SandeshPorfolioWebsite.com | All right reserved
+        </div>
     </footer>
+
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- Setup and start animation! -->
