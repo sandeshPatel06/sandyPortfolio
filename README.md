@@ -1,6 +1,6 @@
 # Sandy's Portfolio Website
 
-Welcome to the repository for Sandy's Portfolio Website. This project showcases Sandy's skills and experiences as a web designer, software engineer, photo editor, and web developer.
+Welcome to Sandy's Portfolio Website! This project is a personal portfolio showcasing Sandy's skills and experiences as a web designer, software engineer, photo editor, and web developer.
 
 ## Table of Contents
 
@@ -79,4 +79,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Sandy - [sandeshpatel.sp.93@gmail.com](mailto:sandeshpatel.sp.93@gmail.com)
 
-Project Link: [https://github.com/sandeshPatel06/sandy-portfolio](https://github.com/sandeshPatel06/sandy-portfolio)
+Project Link: [https://github.com/sandeshpatel06/sandy-portfolio](https://github.com/sandeshpatel06/sandy-portfolio)
+
+
+
+![image](https://github.com/user-attachments/assets/b24d0003-5473-4f49-ae4a-4c4c5b6cf324)
+![image](https://github.com/user-attachments/assets/36d4ffed-0fef-4e55-838e-653eced38f64)
+
+
