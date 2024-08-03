@@ -79,7 +79,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Sandy - [sandeshpatel.sp.93@gmail.com](mailto:sandeshpatel.sp.93@gmail.com)
 
-Project Link: [https://github.com/sandeshpatel06/sandy-portfolio](https://github.com/sandeshpatel06/sandy-portfolio)
+Project Link: [https://github.com/sandeshPatel06/SandyPortfolio](https://github.com/sandeshPatel06/SandyPortfolio)
 
 
 
