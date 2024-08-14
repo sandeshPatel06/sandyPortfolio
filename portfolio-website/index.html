@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Sandy's Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+            padding: 0 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.01rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 140px 0;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .firstsection>div {
+            width: 45%;
+            margin: 10px 0;
+        }
+
+        .leftsection {
+            font-size: 2.5rem;
+        }
+
+        .leftsection .btn {
+            padding: 12px;
+            background-color: rgb(91, 105, 232);
+            border: 2px solid;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+            margin-right: 10px;
+        }
+
+        .rightsection img {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px 0;
+        }
+
+        .purple {
+            color: rgb(158, 89, 223);
+        }
+
+        #element {
+            color: rgb(158, 89, 223)
+        }
+
+        .secondsection {
+            max-width: 90vw;
+            margin: 200px auto;
+            text-align: center;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        .secondsection h1 {
+            font-size: 30px;
+        }
+
+        .secondsection .box {
+            background: white;
+            width: 100%;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .secondsection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 40px;
+            text-align: center;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        footer {
+            background-color: #0c0c1a;
+            color: white;
+            justify-content: space-evenly;
+            padding: 40px 20px;
+        }
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .footer>div {
+            width: 150px;
+            margin: 10px 0;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .firstsection>div {
+                width: 100%;
+            }
+
+            .leftsection {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .leftsection .btn {
+                margin: 10px 5px;
+            }
+
+            .rightsection img {
+                max-width: 80%;
+            }
+
+            .secondsection {
+                margin: 100px 20px;
+            }
+
+            .secondsection .box {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .secondsection .vertical {
+                width: 80%;
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">sandy's portfolio</div>
+            <div class="Right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="https://wa.me/9399613606">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, My name is <span class="purple">sandy</span>
+                <div>
+                    and I am a passionate
+                    <span id="element"></span>
+                </div>
+                <div class="buttons" >
+                    <a href="resume.pdf" style=" text-decoration: none;" class="btn" download>Download Resume</a> </BR>
+                    <a href="https://github.com/sandeshPatel06?tab=repositories" style=" text-decoration: none;" class="btn">Visit GitHub</a>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="bg.png" alt="background image">
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection">
+            <span class="text-gray">Work I have done so far</span>
+            <h1>Past Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img src="dv.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        HTML Developer (2022-2023)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rem id obcaecati culpa qui.
+                        Reprehenderit quas expedita dicta, unde eaque architecto ratione temporibus blanditiis provident
+                        sunt totam fugit aperiam. Beatae.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="dv.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        HTML Developer (2022-2023)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rem id obcaecati culpa qui.
+                        Reprehenderit quas expedita dicta, unde eaque architecto ratione temporibus blanditiis provident
+                        sunt totam fugit aperiam. Beatae.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="dv.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        HTML Developer (2022-2023)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rem id obcaecati culpa qui.
+                        Reprehenderit quas expedita dicta, unde eaque architecto ratione temporibus blanditiis provident
+                        sunt totam fugit aperiam. Beatae.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="dv.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        HTML Developer (2022-2023)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rem id obcaecati culpa qui.
+                        Reprehenderit quas expedita dicta, unde eaque architecto ratione temporibus blanditiis provident
+                        sunt totam fugit aperiam. Beatae.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="dv.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        HTML Developer (2022-2023)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rem id obcaecati culpa qui.
+                        Reprehenderit quas expedita dicta, unde eaque architecto ratione temporibus blanditiis provident
+                        sunt totam fugit aperiam. Beatae.
+                    </div>
+                </div>
+                <br>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">Sandy's portfolio Website</div>
+            <div class="footer-second">
+                <ul>
+                    <li>home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>contact me</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>contact me</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>contact me</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            copyright &#169; SandeshPorfolioWebsite.com | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['web designer.', 'software engineer.', 'photo editor', 'web developer'],
+            typeSpeed: 150,
+        });
+    </script>
+</body>
+
+</html>
