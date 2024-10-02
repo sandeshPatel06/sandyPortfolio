@@ -83,6 +83,11 @@ nav ul li a:hover {
   margin-right: 10px;
 }
 
+.rightsection  {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
 .rightsection img {
   width: 100%;
   max-width: 400px;
