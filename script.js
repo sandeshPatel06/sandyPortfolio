@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Menu Toggle Functionality
   const menuToggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".Right");
 
@@ -7,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menuToggle.classList.toggle("open");
   });
 
-  // Sticky Navigation Bar
+  // Sticky Navigation Bar Functionality
   const navbar = document.querySelector("nav");
   const sticky = navbar.offsetTop;
 
@@ -18,24 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
       navbar.classList.remove("sticky");
     }
   };
-
-  // // Scroll-to-Top Button
-  // const scrollToTopButton = document.createElement('button');
-  // scrollToTopButton.innerText = '↑';
-  // scrollToTopButton.className = 'scroll-to-top';
-  // document.body.appendChild(scrollToTopButton);
-
-  // scrollToTopButton.addEventListener('click', function() {
-  //     window.scrollTo({ top: 0, behavior: 'smooth' });
-  // });
-
-  // window.addEventListener('scroll', function() {
-  //     if (window.scrollY > 300) {
-  //         scrollToTopButton.style.display = 'block';
-  //     } else {
-  //         scrollToTopButton.style.display = 'none';
-  //     }
-  // });
 
   // Scroll-to-Top Button Logic
   const scrollToTopButton = document.createElement("button");
@@ -55,53 +38,73 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Form Validation
-  const form = document.querySelector("form");
-  if (form) {
-    form.addEventListener("submit", function (event) {
-      let valid = true;
+  // Form Validation Logic
+  const form = document.getElementById("contact-form");
+  const statusText = document.getElementById("form-status");
 
-      form.querySelectorAll("[required]").forEach((input) => {
-        if (!input.value.trim()) {
-          valid = false;
-          input.classList.add("error");
-        } else {
-          input.classList.remove("error");
-        }
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // stop default page redirect
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mnndjpkj", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData
       });
 
-      if (!valid) {
-        event.preventDefault(); // Prevent form submission if validation fails
-        alert("Please fill out all required fields.");
+      if (response.ok) {
+        form.reset();
+        statusText.style.color = "green";
+        statusText.textContent = "✅ Message sent successfully!";
+      } else {
+        statusText.style.color = "red";
+        statusText.textContent = "❌ Failed to send. Try again later.";
       }
-    });
-  }
+    } catch (error) {
+      statusText.style.color = "red";
+      statusText.textContent = "❌ Error: Network problem.";
+    }
+  });
+
 });
- // Function to display the image in the modal
- function showImage() {
-  var modal = document.getElementById('myModal');
-  var modalImage = document.getElementById('modalImage');
 
-  // Set the image source to the desired image
-  modalImage.src = 'img/ct.jpg'; // Replace with your image URL
+  const toggle = document.getElementById("theme-toggle");
+  const lightCssHref = "full-themed-light.css"; // your light CSS file path
+  let themeLink = null;
 
-  // Show the modal
-  modal.style.display = 'block';
-}
- function showImag() {
-  var modal = document.getElementById('myModal');
-  var modalImage = document.getElementById('modalImage');
+  // Helper to add light theme CSS
+  function addLightTheme() {
+    themeLink = document.createElement("link");
+    themeLink.rel = "stylesheet";
+    themeLink.href = lightCssHref;
+    themeLink.id = "light-theme-css";
+    document.head.appendChild(themeLink);
+    toggle.textContent = "☀️";
+  }
 
-  // Set the image source to the desired image
-  modalImage.src = 'img/nt.jpg'; // Replace with your image URL
+  // Helper to remove it
+  function removeLightTheme() {
+    const existing = document.getElementById("light-theme-css");
+    if (existing) {
+      existing.remove();
+    }
+    toggle.textContent = "🌙";
+  }
 
-  // Show the modal
-  modal.style.display = 'block';
-}
+  // Load theme from localStorage
+  if (localStorage.getItem("theme") === "light") {
+    addLightTheme();
+  }
 
-// Function to close the modal
-function closeImage() {
-  var modal = document.getElementById('myModal');
-  
-  // Hide the modal
-  modal.style.display = 'none';}
+  // Toggle button logic
+  toggle.addEventListener("click", () => {
+    if (localStorage.getItem("theme") === "light") {
+      removeLightTheme();
+      localStorage.setItem("theme", "dark");
+    } else {
+      addLightTheme();
+      localStorage.setItem("theme", "light");
+    }
+  });
