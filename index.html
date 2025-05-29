@@ -3,135 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Sandesh Patel – Web Developer, Cybersecurity Enthusiast, and Python Programmer.">
-  <meta name="keywords" content="Sandesh Patel, Portfolio, Web Developer, Cybersecurity, HTML, CSS, JavaScript, Python">
-  <meta name="author" content="Sandesh Patel">
-  <meta property="og:title" content="Sandesh Patel Portfolio">
-  <meta property="og:description" content="Explore my projects, skills, and experience as a passionate developer.">
-  <meta property="og:image" content="img/profile.jpg">
-  <meta property="og:url" content="https://sandyPortfolio.ct.ws">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="img/profile.jpeg" type="image/x-icon" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
-    -->
+  <title>Sandy's Portfolio</title>
+  <link rel="stylesheet" href="full-themed-light.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
-
-  <title>Sandesh Patel | Portfolio</title>
-  <!-- <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/Contect.css">
- <link rel="stylesheet" href="css/footer.css">
- <link rel="stylesheet" href="css/hero.css">
- <link rel="stylesheet" href="css/modal.css">
- <link rel="stylesheet" href="css/nav.css">
- <link rel="stylesheet" href="css/responsive.css">
- <link rel="stylesheet" href="css/scroll-to-top.css">
- <link rel="stylesheet" href="css/services.css"> -->
- <link rel="stylesheet" href="full-themed-light.css">
- <!-- <link rel="stylesheet" href="style.css">
- <link rel="stylesheet" href="style.min.css"> -->
 </head>
-
-<body><div id="welcome-animation" class="welcome-animation">
+<body>
+  <div id="welcome-animation" class="welcome-animation">
     <h1>Welcome to <span class="purple">Sandy's Portfolio</span></h1>
   </div>
   <button id="theme-toggle" class="theme-toggle">⚡️</button>
-  <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Sandesh Patel – Web Developer, Cybersecurity Enthusiast, and Python Programmer.">
-  <meta name="keywords" content="Sandesh Patel, Portfolio, Web Developer, Cybersecurity, HTML, CSS, JavaScript, Python">
-  <meta name="author" content="Sandesh Patel">
-  <meta property="og:title" content="Sandesh Patel Portfolio">
-  <meta property="og:description" content="Explore my projects, skills, and experience as a passionate developer.">
-  <meta property="og:image" content="img/profile.jpg">
-  <meta property="og:url" content="https://sandyPortfolio.ct.ws">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="img/profile.jpeg" type="image/x-icon" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
-  <title>Sandesh Patel | Portfolio</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/Contect.css">
- <link rel="stylesheet" href="css/footer.css">
- <link rel="stylesheet" href="css/hero.css">
- <link rel="stylesheet" href="css/modal.css">
- <link rel="stylesheet" href="css/nav.css">
- <link rel="stylesheet" href="css/responsive.css">
- <link rel="stylesheet" href="css/scroll-to-top.css">
- <link rel="stylesheet" href="css/services.css">
- <!-- <link rel="stylesheet" href="full-themed-light.css"> -->
- <!-- <link rel="stylesheet" href="style.css">
- <link rel="stylesheet" href="style.min.css"> -->
-</head>
-
-<body>
-  <!-- ===== Navigation ===== -->
-  <header id="home">
-    <nav>
-      <div class="left">Sandy's Portfolio</div>
-      <button class="menu-toggle" aria-label="Toggle navigation">
+  <nav>
+    <div class="left">Sandy's Portfolio</div>
+    <div class="right">
+      <button class="menu-toggle">
         <span class="menu-icon"></span>
       </button>
-      <div class="Right">
-        <ul>
-          <!-- <li><a href="#home">Home</a></li> -->
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <button class="theme-toggle" id="theme-toggle" title="Toggle theme">🌙</button>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <!-- ===== Hero Section ===== -->
-  <section class="hero firstsection">
+  <section class="firstsection" data-animate="fade-in">
     <div class="leftsection">
       <h1>👋 Hi, I'm <span class="purple">Sandesh Patel</span></h1>
-      <p>I'm a passionate <span id="element"></span></p>
-      <div class="buttons">
-        <a href="SandeshPatel_Resume.pdf" class="btn" download>📄 Download Resume</a>
-        <a target="_blank" class="btn" href="https://github.com/sandeshPatel06">💻 Visit GitHub</a>
+      <p>I'm a passionate web developer and designer</p>
+      <div>
+        <a href="#" class="btn">📄 Download Resume</a>
+        <a href="https://github.com" class="btn">💻 Visit GitHub</a>
       </div>
     </div>
     <div class="rightsection">
-      <img src="img/bg21.jpg" alt="Sandesh Patel" />
+      <img src="img/bg2.avif" alt="Profile Image" />
     </div>
   </section>
 
-  <hr>
+  <hr />
 
-  <!-- ===== About Section ===== -->
-  <section id="about" class="firstsection">
-    <div class="leftsection">
-      <h1>About Me</h1>
-      <p>I am an 18-year-old web developer and designer with a passion for building secure and user-friendly websites.
-        I'm currently pursuing a diploma in Computer Science at Govt. Polytechnic College Narsinghpur.</p>
-    </div>
-    <div class="rightsection">
-      <img src="img/bg2.avif" alt="About Sandesh" />
-    </div>
+  <section class="services-container" id="about" data-animate="fade-in">
+    <h2>ℹ️ About Me</h2>
+    <p>I am an 18-year-old web developer and designer with a passion for building secure and user-friendly websites. I'm currently pursuing a diploma in Computer Science at Govt. Polytechnic College Narsinghpur.</p>
   </section>
 
-  <!-- ===== Education ===== -->
-  <section id="education" class="services-container">
+  <section class="services-container" id="education" data-animate="fade-in">
     <h2>🎓 Education</h2>
-    <p><strong>Govt Polytechnic College Narsinghpur</strong><br>
-      Diploma in Computer Science (6th Semester)<br>
-      Focus: Web Development & Cybersecurity</p>
+    <ul>
+      <li><strong>Govt Polytechnic College Narsinghpur</strong> - Diploma in Computer Science (6th Semester)</li>
+      <li>Focus: Web Development & Cybersecurity</li>
+    </ul>
   </section>
 
-  <!-- ===== Skills ===== -->
-  <section id="skills" class="services-container">
+  <section class="services-container" id="skills" data-animate="fade-in">
     <h2>🛠️ Skills</h2>
     <ul>
       <li><strong>Web:</strong> HTML, CSS, JavaScript, Bootstrap</li>
@@ -142,36 +67,29 @@
     </ul>
   </section>
 
-  <!-- ===== Projects ===== -->
-  <section id="projects" class="services-container">
+  <section class="services-container" id="projects" data-animate="fade-in">
     <h2>🚀 Projects</h2>
     <ul>
-        <li><a href="https://github.com/sandeshPatel06/sandyPortfolio" target="_blank"><strong>sandyPortfolio</strong></a> – Personal portfolio website showcasing my work and skills. <em>(Updated Feb 25, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/BMI-calculator" target="_blank"><strong>BMI Calculator</strong></a> – JavaScript-based BMI calculator with responsive UI. <em>(Updated Feb 13, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/Directory-Monitor" target="_blank"><strong>Directory Monitor</strong></a> – Python script to monitor directory changes and save. <em>(Updated Mar 3, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/MOTION_MART" target="_blank"><strong>MOTION_MART</strong></a> – Python-powered e-commerce platform simulation project. <em>(Updated Apr 28, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/Test_API" target="_blank"><strong>Test_API</strong></a> – Python project for testing API requests and integration. <em>(Updated Apr 8, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/OTP-service" target="_blank"><strong>OTP Service</strong></a> – Backend service for generating and validating OTPs. <em>(Updated Mar 6, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/Digital-India" target="_blank"><strong>Digital India Website</strong></a> – Basic front-end site promoting digital government services. <em>(Updated Nov 13, 2024)</em></li>
-        <!-- <li><a href="https://github.com/sandeshPatel06/MY-LPG" target="_blank"><strong>MY-LPG</strong></a> – Informational LPG service booking webpage. <em>(Updated Nov 12, 2024)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/CM-helpline" target="_blank"><strong>CM Helpline</strong></a> – Helpline interface mimicking government service portals. <em>(Updated Nov 12, 2024)</em></li> -->
-        <li><a href="https://github.com/sandeshPatel06/E-learningWeb" target="_blank"><strong>E-learningWeb</strong></a> – UI prototype for an online education platform. <em>(Updated Apr 28, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/-to-do-list-" target="_blank"><strong>To-Do List</strong></a> – Simple CLI task management tool built in Python. <em>(Updated Apr 8, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/RPS-Game" target="_blank"><strong>RPS Game</strong></a> – Rock Paper Scissors game with JS logic and interface. <em>(Updated Sep 30, 2024)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/Web-design-01" target="_blank"><strong>Web Design 01</strong></a> – HTML design templates from early training. <em>(Updated Sep 11, 2024)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/TTSbyPython.CT" target="_blank"><strong>TTSbyPython.CT</strong></a> – Python text-to-speech converter using simple UI. <em>(Updated Aug 11, 2024)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/personalJarvisAi" target="_blank"><strong>Personal Jarvis AI</strong></a> – Experimental personal assistant using Python voice commands. <em>(Updated Aug 5, 2024)</em></li>
-      </ul>
-      
+      <li><strong>sandyPortfolio</strong> – Personal portfolio website showcasing my work and skills. (<a href="#">Updated Feb 25, 2025</a>)</li>
+      <li><strong>BMI Calculator</strong> – JavaScript-based BMI calculator with responsive UI. (<a href="#">Updated Feb 13, 2025</a>)</li>
+      <li><strong>Directory Monitor</strong> – Python script to monitor directory changes and save. (<a href="#">Updated Mar 3, 2025</a>)</li>
+      <li><strong>MOTION_MART</strong> – Python-powered e-commerce platform simulation project. (<a href="#">Updated Apr 28, 2025</a>)</li>
+      <li><strong>Test_API</strong> – Python project for testing API requests and integration. (<a href="#">Updated Apr 8, 2025</a>)</li>
+      <li><strong>OTP Service</strong> – Backend service for generating and validating OTPs. (<a href="#">Updated Mar 6, 2025</a>)</li>
+      <li><strong>Digital India Website</strong> – Basic front-end site promoting digital government services. (<a href="#">Updated Nov 13, 2024</a>)</li>
+      <li><strong>E-learningWeb</strong> – UI prototype for an online education platform. (<a href="#">Updated Apr 28, 2025</a>)</li>
+      <li><strong>To-Do List</strong> – Simple CLI task management tool built in Python. (<a href="#">Updated Apr 8, 2025</a>)</li>
+      <li><strong>RPS Game</strong> – Rock Paper Scissors game with JS logic and interface. (<a href="#">Updated Sep 30, 2024</a>)</li>
+      <li><strong>Web Design 01</strong> – HTML design templates from early training. (<a href="#">Updated Sep 11, 2024</a>)</li>
+      <li><strong>TTSbyPython.CT</strong> – Python text-to-speech converter using simple UI. (<a href="#">Updated Aug 11, 2024</a>)</li>
+      <li><strong>Personal Jarvis AI</strong> – Experimental personal assistant using Python voice commands. (<a href="#">Updated Aug 5, 2024</a>)</li>
+    </ul>
   </section>
 
-  <!-- ===== Past Experience ===== -->
-  <section class="secondsection">
+  <section class="secondsection" data-animate="fade-in">
     <h2 class="section-heading">📈 My Learning Journey</h2>
     <p class="section-subheading">From core skills to real-world experience</p>
-  
     <div class="timeline">
-  
       <div class="timeline-item">
         <div class="timeline-date">April 2024</div>
         <div class="timeline-content">
@@ -179,7 +97,6 @@
           <p>Built structured web pages using semantic HTML. Laid the groundwork for frontend development.</p>
         </div>
       </div>
-  
       <div class="timeline-item">
         <div class="timeline-date">May 2024</div>
         <div class="timeline-content">
@@ -187,7 +104,6 @@
           <p>Mastered layout, flexbox, and responsive web design for mobile-first interfaces.</p>
         </div>
       </div>
-  
       <div class="timeline-item">
         <div class="timeline-date">June 2024</div>
         <div class="timeline-content">
@@ -195,7 +111,6 @@
           <p>Learned DOM manipulation, events, and core JS concepts to build dynamic features.</p>
         </div>
       </div>
-  
       <div class="timeline-item">
         <div class="timeline-date">July–Aug 2024</div>
         <div class="timeline-content">
@@ -203,7 +118,6 @@
           <p>Practiced problem-solving and logic building using Python basics and OOP.</p>
         </div>
       </div>
-  
       <div class="timeline-item">
         <div class="timeline-date">July 2024</div>
         <div class="timeline-content">
@@ -211,7 +125,6 @@
           <p>Studied secure coding practices and basic system protection methods.</p>
         </div>
       </div>
-  
       <div class="timeline-item">
         <div class="timeline-date">July–Sept 2024</div>
         <div class="timeline-content">
@@ -219,7 +132,6 @@
           <p>Worked on frontend and backend projects. Gained hands-on experience in team collaboration and code deployment.</p>
         </div>
       </div>
-  
       <div class="timeline-item">
         <div class="timeline-date">Aug–Sept 2024</div>
         <div class="timeline-content">
@@ -227,58 +139,37 @@
           <p>Explored data preprocessing, model training, and real-world ML applications using Python.</p>
         </div>
       </div>
-  
     </div>
   </section>
-  
 
-  <!-- ===== Contact Section ===== -->
-  <section id="contact" class="services-container">
+  <section id="contact" data-animate="fade-in">
     <h2>📬 Contact Me</h2>
-    <form id="contact-form">
+    <div id="contact-form">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <input type="number" name="number" placeholder="Your contact number" required />
       <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-      <p id="form-status" style="margin-top: 10px;"></p>
-    </form>
-  </section>
-  
-
-  <!-- ===== Footer ===== -->
-  <footer>
-    <div class="footer">
-      <div class="footer-first">Sandy's Portfolio Website</div>
-      <div class="footer-second">
-        <ul>
-          <li><a href="https://www.instagram.com/sandesh_patel007" target="_blank">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/in/sandesh-patel07" target="_blank">LinkedIn</a></li>
-          <li><a href="mailto:sandeshpatel.sp.93@gmail.com">Email</a></li>
-          <li><a href="https://github.com/sandeshPatel06" target="_blank">GitHub</a></li>
-        </ul>
-      </div>
+      <button type="button" id="submit-form">Send Message</button>
+      <p id="form-status"></p>
     </div>
-    <div class="footer-rights">
+  </section>
+
+  <footer class="footer">
+    <div class="footer-first">Sandy's Portfolio Website</div>
+    <ul>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">Email</a></li>
+      <li><a href="#">GitHub</a></li>
+    </ul>
+    <div class="rights">
       <ul>
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Terms of Service</a></li>
       </ul>
-      &copy; 2025 SandeshPortfolioWebsite.com | All rights reserved
+      <p>© 2025 SandeshPortfolioWebsite.com | All rights reserved</p>
     </div>
   </footer>
 
-  <!-- ===== Typed.js for Animated Hero Text ===== -->
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['Web Designer', 'Cybersecurity Enthusiast', 'Python Programmer', 'Frontend Developer'],
-      typeSpeed: 100,
-      backSpeed: 50,
-      loop: true
-    });
-  </script>
   <script src="script.js"></script>
 </body>
-
 </html>
