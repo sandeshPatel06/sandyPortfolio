@@ -1,14 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Welcome Animation
+  const welcomeAnimation = document.getElementById("welcome-animation");
+  setTimeout(() => {
+    welcomeAnimation.style.display = "none";
+  }, 3000); // Match animation duration (3s)
+
+  // Theme Toggle Functionality
+  const toggle = document.getElementById("theme-toggle");
+  const htmlElement = document.documentElement;
+
+  // Load theme from localStorage
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  htmlElement.setAttribute("data-theme", savedTheme);
+  toggle.textContent = savedTheme === "high-neon" ? "🌌" : "⚡️";
+
+  // Toggle between dark and high-neon modes
+  toggle.addEventListener("click", () => {
+    const currentTheme = htmlElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "high-neon" : "dark";
+    htmlElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+    toggle.textContent = newTheme === "high-neon" ? "🌌" : "⚡️";
+    toggle.style.transform = newTheme === "high-neon" ? "rotate(180deg)" : "rotate(0deg)";
+  });
+
   // Menu Toggle Functionality
   const menuToggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".Right");
+  const menu = document.querySelector(".right");
 
   menuToggle.addEventListener("click", function () {
     menu.classList.toggle("active");
     menuToggle.classList.toggle("open");
+    menuToggle.style.transform = menuToggle.classList.contains("open")
+      ? "rotate(90deg)"
+      : "rotate(0deg)";
   });
 
-  // Sticky Navigation Bar Functionality
+  // Sticky Navigation Bar
   const navbar = document.querySelector("nav");
   const sticky = navbar.offsetTop;
 
@@ -20,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  // Scroll-to-Top Button Logic
+  // Scroll-to-Top Button
   const scrollToTopButton = document.createElement("button");
   scrollToTopButton.innerText = "↑";
   scrollToTopButton.className = "scroll-to-top";
@@ -33,19 +61,36 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     if (window.scrollY > 300) {
       scrollToTopButton.style.display = "block";
+      scrollToTopButton.style.opacity = "1";
+      scrollToTopButton.style.transform = "translateY(0)";
     } else {
-      scrollToTopButton.style.display = "none";
+      scrollToTopButton.style.opacity = "0";
+      scrollToTopButton.style.transform = "translateY(20px)";
     }
   });
 
-  // Form Validation Logic
+  // Smooth Scroll for Navigation Links
+  document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+      menu.classList.remove("active");
+      menuToggle.classList.remove("open");
+      menuToggle.style.transform = "rotate(0deg)";
+    });
+  });
+
+  // Form Submission Logic
   const form = document.getElementById("contact-form");
+  const submitButton = document.getElementById("submit-form");
   const statusText = document.getElementById("form-status");
 
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault(); // stop default page redirect
-
+  submitButton.addEventListener("click", async function () {
     const formData = new FormData(form);
+    statusText.style.color = "#78909c"; // --text-muted
+    statusText.textContent = "⚙️ Sending...";
 
     try {
       const response = await fetch("https://formspree.io/f/mnndjpkj", {
@@ -56,55 +101,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (response.ok) {
         form.reset();
-        statusText.style.color = "green";
+        statusText.style.color = "#d81b60"; // --highlight-color
         statusText.textContent = "✅ Message sent successfully!";
       } else {
-        statusText.style.color = "red";
+        statusText.style.color = "#ff1744";
         statusText.textContent = "❌ Failed to send. Try again later.";
       }
     } catch (error) {
-      statusText.style.color = "red";
+      statusText.style.color = "#ff1744";
       statusText.textContent = "❌ Error: Network problem.";
     }
   });
 
-});
+  // Scroll Animation for Sections
+  const animatedElements = document.querySelectorAll('[data-animate="fade-in"]');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
 
-  const toggle = document.getElementById("theme-toggle");
-  const lightCssHref = "full-themed-light.css"; // your light CSS file path
-  let themeLink = null;
-
-  // Helper to add light theme CSS
-  function addLightTheme() {
-    themeLink = document.createElement("link");
-    themeLink.rel = "stylesheet";
-    themeLink.href = lightCssHref;
-    themeLink.id = "light-theme-css";
-    document.head.appendChild(themeLink);
-    toggle.textContent = "☀️";
-  }
-
-  // Helper to remove it
-  function removeLightTheme() {
-    const existing = document.getElementById("light-theme-css");
-    if (existing) {
-      existing.remove();
-    }
-    toggle.textContent = "🌙";
-  }
-
-  // Load theme from localStorage
-  if (localStorage.getItem("theme") === "light") {
-    addLightTheme();
-  }
-
-  // Toggle button logic
-  toggle.addEventListener("click", () => {
-    if (localStorage.getItem("theme") === "light") {
-      removeLightTheme();
-      localStorage.setItem("theme", "dark");
-    } else {
-      addLightTheme();
-      localStorage.setItem("theme", "light");
-    }
+  animatedElements.forEach((el) => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(50px)";
+    el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+    observer.observe(el);
   });
+});
