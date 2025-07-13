@@ -1,26 +1,45 @@
+// ===== Typed.js for Animated Hero Text =====
 document.addEventListener("DOMContentLoaded", function () {
-  // Menu Toggle Functionality
+  if (window.Typed) {
+    new Typed('#element', {
+      strings: [
+        'Web Designer',
+        'Cybersecurity Enthusiast',
+        'Python Programmer',
+        'Frontend Developer'
+      ],
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true
+    });
+  }
+
+  // ===== Menu Toggle Functionality =====
   const menuToggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".Right");
+  if (menuToggle && menu) {
+    menuToggle.addEventListener("click", function () {
+      menu.classList.toggle("active");
+      menuToggle.classList.toggle("open");
+    });
+  }
 
-  menuToggle.addEventListener("click", function () {
-    menu.classList.toggle("active");
-    menuToggle.classList.toggle("open");
-  });
-
-  // Sticky Navigation Bar Functionality
+  // ===== Sticky Navigation Bar Functionality =====
   const navbar = document.querySelector("nav");
-  const sticky = navbar.offsetTop;
+  if (navbar) {
+    const sticky = navbar.offsetTop;
+    window.addEventListener("scroll", function () {
+      if (window.pageYOffset > sticky) {
+        navbar.classList.add("sticky");
+        document.body.classList.add("sticky-nav-active");
+      } else {
+        navbar.classList.remove("sticky");
+        document.body.classList.remove("sticky-nav-active");
+      }
+    });
+  }
 
-  window.onscroll = function () {
-    if (window.pageYOffset > sticky) {
-      navbar.classList.add("sticky");
-    } else {
-      navbar.classList.remove("sticky");
-    }
-  };
-
-  // Scroll-to-Top Button Logic
+  // ===== Scroll-to-Top Button Logic =====
   const scrollToTopButton = document.createElement("button");
   scrollToTopButton.innerText = "↑";
   scrollToTopButton.className = "scroll-to-top";
@@ -38,73 +57,47 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Form Validation Logic
+  // ===== Contact Form Validation & Submission =====
   const form = document.getElementById("contact-form");
   const statusText = document.getElementById("form-status");
-
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault(); // stop default page redirect
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch("https://formspree.io/f/mnndjpkj", {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: formData
-      });
-
-      if (response.ok) {
-        form.reset();
-        statusText.style.color = "green";
-        statusText.textContent = "✅ Message sent successfully!";
-      } else {
+  if (form && statusText) {
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      try {
+        const response = await fetch("https://formspree.io/f/mnndjpkj", {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: formData
+        });
+        if (response.ok) {
+          form.reset();
+          statusText.style.color = "green";
+          statusText.textContent = "✅ Message sent successfully!";
+        } else {
+          statusText.style.color = "red";
+          statusText.textContent = "❌ Failed to send. Try again later.";
+        }
+      } catch (error) {
         statusText.style.color = "red";
-        statusText.textContent = "❌ Failed to send. Try again later.";
+        statusText.textContent = "❌ Error: Network problem.";
       }
-    } catch (error) {
-      statusText.style.color = "red";
-      statusText.textContent = "❌ Error: Network problem.";
-    }
-  });
+    });
+  }
 
+  // ===== Theme Toggle (Light/Dark Mode) =====
+  const themeToggle = document.getElementById("theme-toggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute("data-theme");
+      if (currentTheme === "dark") {
+        html.removeAttribute("data-theme");
+        themeToggle.textContent = "🌙";
+      } else {
+        html.setAttribute("data-theme", "dark");
+        themeToggle.textContent = "☀️";
+      }
+    });
+  }
 });
-
-  const toggle = document.getElementById("theme-toggle");
-  const lightCssHref = "full-themed-light.css"; // your light CSS file path
-  let themeLink = null;
-
-  // Helper to add light theme CSS
-  function addLightTheme() {
-    themeLink = document.createElement("link");
-    themeLink.rel = "stylesheet";
-    themeLink.href = lightCssHref;
-    themeLink.id = "light-theme-css";
-    document.head.appendChild(themeLink);
-    toggle.textContent = "☀️";
-  }
-
-  // Helper to remove it
-  function removeLightTheme() {
-    const existing = document.getElementById("light-theme-css");
-    if (existing) {
-      existing.remove();
-    }
-    toggle.textContent = "🌙";
-  }
-
-  // Load theme from localStorage
-  if (localStorage.getItem("theme") === "light") {
-    addLightTheme();
-  }
-
-  // Toggle button logic
-  toggle.addEventListener("click", () => {
-    if (localStorage.getItem("theme") === "light") {
-      removeLightTheme();
-      localStorage.setItem("theme", "dark");
-    } else {
-      addLightTheme();
-      localStorage.setItem("theme", "light");
-    }
-  });

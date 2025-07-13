@@ -18,18 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
   <title>Sandesh Patel | Portfolio</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/Contect.css">
- <link rel="stylesheet" href="css/footer.css">
- <link rel="stylesheet" href="css/hero.css">
- <link rel="stylesheet" href="css/modal.css">
- <link rel="stylesheet" href="css/nav.css">
- <link rel="stylesheet" href="css/responsive.css">
- <link rel="stylesheet" href="css/scroll-to-top.css">
- <link rel="stylesheet" href="css/services.css">
- <!-- <link rel="stylesheet" href="full-themed-light.css"> -->
- <!-- <link rel="stylesheet" href="style.css">
- <link rel="stylesheet" href="style.min.css"> -->
+  <link rel="stylesheet" href="all-in-one.css">
 </head>
 
 <body>
@@ -37,12 +26,14 @@
   <header id="home">
     <nav>
       <div class="left">Sandy's Portfolio</div>
-      <button class="menu-toggle" aria-label="Toggle navigation">
-        <span class="menu-icon"></span>
-      </button>
+      <div class="nav-actions">
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <span class="menu-icon"></span>
+        </button>
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme">🌙</button>
+      </div>
       <div class="Right">
         <ul>
-          <!-- <li><a href="#home">Home</a></li> -->
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -51,7 +42,6 @@
       </div>
     </nav>
   </header>
-  <button class="theme-toggle" id="theme-toggle" title="Toggle theme">🌙</button>
 
   <!-- ===== Hero Section ===== -->
   <section class="hero firstsection">
@@ -106,32 +96,29 @@
   <section id="projects" class="services-container">
     <h2>🚀 Projects</h2>
     <ul>
-        <li><a href="https://github.com/sandeshPatel06/sandyPortfolio" target="_blank"><strong>sandyPortfolio</strong></a> – Personal portfolio website showcasing my work and skills. <em>(Updated Feb 25, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/BMI-calculator" target="_blank"><strong>BMI Calculator</strong></a> – JavaScript-based BMI calculator with responsive UI. <em>(Updated Feb 13, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/Directory-Monitor" target="_blank"><strong>Directory Monitor</strong></a> – Python script to monitor directory changes and save. <em>(Updated Mar 3, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/MOTION_MART" target="_blank"><strong>MOTION_MART</strong></a> – Python-powered e-commerce platform simulation project. <em>(Updated Apr 28, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/Test_API" target="_blank"><strong>Test_API</strong></a> – Python project for testing API requests and integration. <em>(Updated Apr 8, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/OTP-service" target="_blank"><strong>OTP Service</strong></a> – Backend service for generating and validating OTPs. <em>(Updated Mar 6, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/Digital-India" target="_blank"><strong>Digital India Website</strong></a> – Basic front-end site promoting digital government services. <em>(Updated Nov 13, 2024)</em></li>
-        <!-- <li><a href="https://github.com/sandeshPatel06/MY-LPG" target="_blank"><strong>MY-LPG</strong></a> – Informational LPG service booking webpage. <em>(Updated Nov 12, 2024)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/CM-helpline" target="_blank"><strong>CM Helpline</strong></a> – Helpline interface mimicking government service portals. <em>(Updated Nov 12, 2024)</em></li> -->
-        <li><a href="https://github.com/sandeshPatel06/E-learningWeb" target="_blank"><strong>E-learningWeb</strong></a> – UI prototype for an online education platform. <em>(Updated Apr 28, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/-to-do-list-" target="_blank"><strong>To-Do List</strong></a> – Simple CLI task management tool built in Python. <em>(Updated Apr 8, 2025)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/RPS-Game" target="_blank"><strong>RPS Game</strong></a> – Rock Paper Scissors game with JS logic and interface. <em>(Updated Sep 30, 2024)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/Web-design-01" target="_blank"><strong>Web Design 01</strong></a> – HTML design templates from early training. <em>(Updated Sep 11, 2024)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/TTSbyPython.CT" target="_blank"><strong>TTSbyPython.CT</strong></a> – Python text-to-speech converter using simple UI. <em>(Updated Aug 11, 2024)</em></li>
-        <li><a href="https://github.com/sandeshPatel06/personalJarvisAi" target="_blank"><strong>Personal Jarvis AI</strong></a> – Experimental personal assistant using Python voice commands. <em>(Updated Aug 5, 2024)</em></li>
-      </ul>
-      
+      <li><a href="https://github.com/sandeshPatel06/sandyPortfolio" target="_blank"><strong>sandyPortfolio</strong></a> – Personal portfolio website showcasing my work and skills. <em>(Updated Feb 25, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/BMI-calculator" target="_blank"><strong>BMI Calculator</strong></a> – JavaScript-based BMI calculator with responsive UI. <em>(Updated Feb 13, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/Directory-Monitor" target="_blank"><strong>Directory Monitor</strong></a> – Python script to monitor directory changes and save. <em>(Updated Mar 3, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/MOTION_MART" target="_blank"><strong>MOTION_MART</strong></a> – Python-powered e-commerce platform simulation project. <em>(Updated Apr 28, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/Test_API" target="_blank"><strong>Test_API</strong></a> – Python project for testing API requests and integration. <em>(Updated Apr 8, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/OTP-service" target="_blank"><strong>OTP Service</strong></a> – Backend service for generating and validating OTPs. <em>(Updated Mar 6, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/Digital-India" target="_blank"><strong>Digital India Website</strong></a> – Basic front-end site promoting digital government services. <em>(Updated Nov 13, 2024)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/E-learningWeb" target="_blank"><strong>E-learningWeb</strong></a> – UI prototype for an online education platform. <em>(Updated Apr 28, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/-to-do-list-" target="_blank"><strong>To-Do List</strong></a> – Simple CLI task management tool built in Python. <em>(Updated Apr 8, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/RPS-Game" target="_blank"><strong>RPS Game</strong></a> – Rock Paper Scissors game with JS logic and interface. <em>(Updated Sep 30, 2024)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/Web-design-01" target="_blank"><strong>Web Design 01</strong></a> – HTML design templates from early training. <em>(Updated Sep 11, 2024)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/TTSbyPython.CT" target="_blank"><strong>TTSbyPython.CT</strong></a> – Python text-to-speech converter using simple UI. <em>(Updated Aug 11, 2024)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/personalJarvisAi" target="_blank"><strong>Personal Jarvis AI</strong></a> – Experimental personal assistant using Python voice commands. <em>(Updated Aug 5, 2024)</em></li>
+    </ul>
   </section>
 
   <!-- ===== Past Experience ===== -->
   <section class="secondsection">
     <h2 class="section-heading">📈 My Learning Journey</h2>
     <p class="section-subheading">From core skills to real-world experience</p>
-  
+
     <div class="timeline">
-  
+
       <div class="timeline-item">
         <div class="timeline-date">April 2024</div>
         <div class="timeline-content">
@@ -139,7 +126,7 @@
           <p>Built structured web pages using semantic HTML. Laid the groundwork for frontend development.</p>
         </div>
       </div>
-  
+
       <div class="timeline-item">
         <div class="timeline-date">May 2024</div>
         <div class="timeline-content">
@@ -147,7 +134,7 @@
           <p>Mastered layout, flexbox, and responsive web design for mobile-first interfaces.</p>
         </div>
       </div>
-  
+
       <div class="timeline-item">
         <div class="timeline-date">June 2024</div>
         <div class="timeline-content">
@@ -155,7 +142,7 @@
           <p>Learned DOM manipulation, events, and core JS concepts to build dynamic features.</p>
         </div>
       </div>
-  
+
       <div class="timeline-item">
         <div class="timeline-date">July–Aug 2024</div>
         <div class="timeline-content">
@@ -163,7 +150,7 @@
           <p>Practiced problem-solving and logic building using Python basics and OOP.</p>
         </div>
       </div>
-  
+
       <div class="timeline-item">
         <div class="timeline-date">July 2024</div>
         <div class="timeline-content">
@@ -171,7 +158,7 @@
           <p>Studied secure coding practices and basic system protection methods.</p>
         </div>
       </div>
-  
+
       <div class="timeline-item">
         <div class="timeline-date">July–Sept 2024</div>
         <div class="timeline-content">
@@ -179,7 +166,7 @@
           <p>Worked on frontend and backend projects. Gained hands-on experience in team collaboration and code deployment.</p>
         </div>
       </div>
-  
+
       <div class="timeline-item">
         <div class="timeline-date">Aug–Sept 2024</div>
         <div class="timeline-content">
@@ -187,10 +174,9 @@
           <p>Explored data preprocessing, model training, and real-world ML applications using Python.</p>
         </div>
       </div>
-  
+
     </div>
   </section>
-  
 
   <!-- ===== Contact Section ===== -->
   <section id="contact" class="services-container">
@@ -204,7 +190,6 @@
       <p id="form-status" style="margin-top: 10px;"></p>
     </form>
   </section>
-  
 
   <!-- ===== Footer ===== -->
   <footer>
@@ -228,17 +213,9 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <!-- ===== Typed.js for Animated Hero Text ===== -->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['Web Designer', 'Cybersecurity Enthusiast', 'Python Programmer', 'Frontend Developer'],
-      typeSpeed: 100,
-      backSpeed: 50,
-      loop: true
-    });
-  </script>
   <script src="script.js"></script>
 </body>
-
 </html>
