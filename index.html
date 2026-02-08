@@ -2,335 +2,220 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
-    <title>Sandesh Patel Portfolio </title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Sandesh Patel – Web Developer, Cybersecurity Enthusiast, and Python Programmer.">
+  <meta name="keywords" content="Sandesh Patel, Portfolio, Web Developer, Cybersecurity, HTML, CSS, JavaScript, Python">
+  <meta name="author" content="Sandesh Patel">
+  <meta property="og:title" content="Sandesh Patel Portfolio">
+  <meta property="og:description" content="Explore my projects, skills, and experience as a passionate developer.">
+  <meta property="og:image" content="img/profile.jpg">
+  <meta property="og:url" content="https://sandyPortfolio.ct.ws">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="img/profile.jpeg" type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
+  <title>Sandesh Patel | Portfolio</title>
+  <link rel="stylesheet" href="all-in-one.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="left">Sandy's Portfolio</div>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <span class="menu-icon"></span>
-            </button>
-            <div class="Right">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#Services">Services</a></li>
-                    <li><a target="_blank" href="https://wa.me/9399613606">Whatsapp Me</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <!-- ===== Navigation ===== -->
+  <header id="home">
+    <nav>
+      <div class="left">Sandy's Portfolio</div>
+      <div class="nav-actions">
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <span class="menu-icon"></span>
+        </button>
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme">🌙</button>
+      </div>
+      <div class="Right">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-        <!-- First Section: Introduction -->
-        <section class="firstsection">
-            <div class="leftsection">
-                Hi, My name is <span class="purple">SANDESH PATEL</span>
-                <div>and I am a passionate <span id="element"></span></div>
-                <div class="buttons">
-                    <a href="SandeshPatel_Resume.pdf.pdf" class="btn" download>Download Resume</a>
-                    <a target="_blank" class="btn" href="https://github.com/sandeshPatel06?tab=repositories">Visit
-                        GitHub</a>
-                </div>
-            </div>
-            <div class="rightsection">
-                <img src="img/bg.png" alt="background image">
-            </div>
-        </section>
-        <hr>
+  <!-- ===== Hero Section ===== -->
+  <section class="hero firstsection">
+    <div class="leftsection">
+      <h1>👋 Hi, I'm <span class="purple">Sandesh Patel</span></h1>
+      <p>I'm a passionate <span id="element"></span></p>
+      <div class="buttons">
+        <a href="SandeshPatel_Resume.pdf" class="btn" download>📄 Download Resume</a>
+        <a target="_blank" class="btn" href="https://github.com/sandeshPatel06">💻 Visit GitHub</a>
+      </div>
+    </div>
+    <div class="rightsection">
+      <img src="img/bg21.jpg" alt="Sandesh Patel" />
+    </div>
+  </section>
 
-        <!-- Services Section -->
-        <div id="Services" class="services-container">
-            <h1>List of My Services</h1>
-            <ul>
-                <li><b>Custom Front-End Development:</b> Tailoring websites using HTML, CSS, and JavaScript.</li>
-                <li><b>Single Page Application (SPA) Development:</b> Building fast-loading SPAs.</li>
-                <li><b>UI/UX Design:</b> Designing intuitive, responsive, and visually appealing interfaces.</li>
-                <li><b>Cross-Browser Compatibility:</b> Ensuring websites function smoothly across major browsers.</li>
-                <li><b>Interactive Elements:</b> Implementing animations and transitions for user engagement.</li>
-                <li><b>Performance Optimization:</b> Enhancing the speed and performance of websites.</li>
-            </ul>
-            <hr>
+  <hr>
+
+  <!-- ===== About Section ===== -->
+  <section id="about" class="firstsection">
+    <div class="leftsection">
+      <h1>About Me</h1>
+      <p>I am an 18-year-old web developer and designer with a passion for building secure and user-friendly websites.
+        I'm currently pursuing a diploma in Computer Science at Govt. Polytechnic College Narsinghpur.</p>
+    </div>
+    <div class="rightsection">
+      <img src="img/bg2.avif" alt="About Sandesh" />
+    </div>
+  </section>
+
+  <!-- ===== Education ===== -->
+  <section id="education" class="services-container">
+    <h2>🎓 Education</h2>
+    <p><strong>Govt Polytechnic College Narsinghpur</strong><br>
+      Diploma in Computer Science (6th Semester)<br>
+      Focus: Web Development & Cybersecurity</p>
+  </section>
+
+  <!-- ===== Skills ===== -->
+  <section id="skills" class="services-container">
+    <h2>🛠️ Skills</h2>
+    <ul>
+      <li><strong>Web:</strong> HTML, CSS, JavaScript, Bootstrap</li>
+      <li><strong>Cybersecurity:</strong> Basic Secure Coding, Practices</li>
+      <li><strong>Languages:</strong> Python, C, JavaScript</li>
+      <li><strong>Tools:</strong> VS Code, Git, Linux Systems</li>
+      <li><strong>Soft Skills:</strong> Teamwork, Problem-Solving, Time Management</li>
+    </ul>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="services-container">
+    <h2>🚀 Projects</h2>
+    <ul>
+      <li><a href="https://github.com/sandeshPatel06/sandyPortfolio" target="_blank"><strong>sandyPortfolio</strong></a> – Personal portfolio website showcasing my work and skills. <em>(Updated Feb 25, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/BMI-calculator" target="_blank"><strong>BMI Calculator</strong></a> – JavaScript-based BMI calculator with responsive UI. <em>(Updated Feb 13, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/Directory-Monitor" target="_blank"><strong>Directory Monitor</strong></a> – Python script to monitor directory changes and save. <em>(Updated Mar 3, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/MOTION_MART" target="_blank"><strong>MOTION_MART</strong></a> – Python-powered e-commerce platform simulation project. <em>(Updated Apr 28, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/Test_API" target="_blank"><strong>Test_API</strong></a> – Python project for testing API requests and integration. <em>(Updated Apr 8, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/OTP-service" target="_blank"><strong>OTP Service</strong></a> – Backend service for generating and validating OTPs. <em>(Updated Mar 6, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/Digital-India" target="_blank"><strong>Digital India Website</strong></a> – Basic front-end site promoting digital government services. <em>(Updated Nov 13, 2024)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/E-learningWeb" target="_blank"><strong>E-learningWeb</strong></a> – UI prototype for an online education platform. <em>(Updated Apr 28, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/-to-do-list-" target="_blank"><strong>To-Do List</strong></a> – Simple CLI task management tool built in Python. <em>(Updated Apr 8, 2025)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/RPS-Game" target="_blank"><strong>RPS Game</strong></a> – Rock Paper Scissors game with JS logic and interface. <em>(Updated Sep 30, 2024)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/Web-design-01" target="_blank"><strong>Web Design 01</strong></a> – HTML design templates from early training. <em>(Updated Sep 11, 2024)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/TTSbyPython.CT" target="_blank"><strong>TTSbyPython.CT</strong></a> – Python text-to-speech converter using simple UI. <em>(Updated Aug 11, 2024)</em></li>
+      <li><a href="https://github.com/sandeshPatel06/personalJarvisAi" target="_blank"><strong>Personal Jarvis AI</strong></a> – Experimental personal assistant using Python voice commands. <em>(Updated Aug 5, 2024)</em></li>
+    </ul>
+  </section>
+
+  <!-- ===== Past Experience ===== -->
+  <section class="secondsection">
+    <h2 class="section-heading">📈 My Learning Journey</h2>
+    <p class="section-subheading">From core skills to real-world experience</p>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-date">April 2024</div>
+        <div class="timeline-content">
+          <h3>HTML Foundation</h3>
+          <p>Built structured web pages using semantic HTML. Laid the groundwork for frontend development.</p>
         </div>
+      </div>
 
-        <!-- About Me Section -->
-        <!-- <div id="about">
-            <section class="firstsection">
-                <div class="leftsection">
-                    <h1>About Me</h1>
-                    <p>I am an 18-year-old web developer and designer, currently studying at Government Polytechnic
-                        College Narshingpur. My goal is to build innovative and secure web solutions.</p>
-                </div>
-                <div class="rightsection">
-                    <img src="img/im.jpg" alt="Profile Picture">
-                </div>
-            </section>
-
-             Education Section -->
-        <!-- <section id="education" class="services-container">
-                <h2>Education</h2>
-                <p>Government Polytechnic College Narshingpur<br> Studying Web Development and Cybersecurity</p>
-            </section>
-
-        Skills Section -->
-        <!-- <section id="skills" class="services-container">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Web Development: HTML, CSS, JavaScript</li>
-                    <li>Web Design: Responsive Design, UI/UX</li>
-                    <li>Cybersecurity: Basic Security Practices</li>
-                </ul>
-            </section> -->
-        <div id="about">
-            <section class="firstsection">
-                <div class="leftsection">
-                    <h1>About Me</h1>
-                    <p>
-                        I am an 18-year-old web developer and designer with a passion for creating innovative, secure,
-                        and user-friendly web solutions.
-                        Currently pursuing my diploma in Computer Science at Government Polytechnic College Narshingpur,
-                        I am dedicated to mastering
-                        web technologies and cybersecurity practices. Alongside my studies, I also have hands-on
-                        experience in IT support,
-                        contributing to real-world projects that enhance my technical expertise. My goal is to build
-                        high-performance web applications
-                        and contribute to the digital world with creative and efficient solutions.
-                    </p>
-                </div>
-                <div class="rightsection">
-                    <img src="img/im.jpg" alt="Profile Picture">
-                </div>
-            </section>
-
-            <!-- Education Section -->
-            <section id="education" class="services-container">
-                <h2>Education</h2>
-                <p><strong>Government Polytechnic College Narshingpur</strong><br>
-                    Diploma in Computer Science (5th Semester)<br>
-                    Focus Areas: Web Development, Cybersecurity, Data Science, IoT, Multimedia Technology, Renewable
-                    Energy</p>
-            </section>
-
-            <!-- Skills Section -->
-            <section id="skills" class="services-container">
-                <h2>Skills</h2>
-                <ul>
-                    <li><strong>Web Development:</strong> HTML, CSS, JavaScript, Bootstrap</li>
-                    <li><strong>Web Design:</strong> Responsive Design, UI/UX, Wireframing</li>
-                    <li><strong>Cybersecurity:</strong> Basic Security Practices, Secure Coding</li>
-                    <li><strong>Programming Languages:</strong> Python, C, Java</li>
-                    <li><strong>Software & Tools:</strong> VS Code, Git, Linux Systems</li>
-                    <li><strong>Soft Skills:</strong> Problem-Solving, Teamwork, Time Management</li>
-                </ul>
-            </section>
-
-            <!-- Experience Section -->
-            <section id="experience" class="services-container">
-                <h2>Experience</h2>
-                <p>Currently working in the medical field while managing my technical learning and projects. Hands-on
-                    experience in troubleshooting
-                    IT-related issues, assisting in web-based projects, and continuously improving my coding skills.</p>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="services-container">
-                <h2>Projects</h2>
-                <ul>
-                    <li><strong>Portfolio Website:</strong> A personal portfolio showcasing my skills and projects.</li>
-                    <li><strong>Secure Login System:</strong> Developed a secure user authentication system with basic
-                        cybersecurity measures.</li>
-                    <li><strong>E-Governance Project:</strong> Contributed to a project aimed at digital solutions for
-                        governance.</li>
-                </ul>
-            </section>
+      <div class="timeline-item">
+        <div class="timeline-date">May 2024</div>
+        <div class="timeline-content">
+          <h3>CSS & Responsive Design</h3>
+          <p>Mastered layout, flexbox, and responsive web design for mobile-first interfaces.</p>
         </div>
+      </div>
 
-
-        <section id="projects" class="projects-container">
-            <h1>My Projects</h1>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="img/rps.png" alt="Project 1">
-                    <h2>Rock, Paper and Scissors GAME</h2>
-                    <p>I developed a rock-paper-scissors game using HTML, CSS, and JavaScript, allowing users to
-                        play against the computer with interactive visuals and dynamic game logic.</p>
-                    <a href="https://github.com/RPS-Game/" target="_blank">View on GitHub</a> <br>
-                    <a href="https://sandeshpatel06.github.io/RPS-Game/" target="_blank">View Live</a>
-                </div>
-                <div class="project-card">
-                    <img src="img/learnig.png" alt="Project 2">
-                    <h2>E-Commerce Website</h2>
-                    <p>I created an e-learning website using HTML, CSS, and JavaScript, featuring various tech
-                        development courses and Google Form integration for seamless user interaction and feedback.
-                    </p>
-                    <a href="https://github.com/sandeshpatel06/E-learningWeb/" target="_blank">View on GitHub</a>
-                    <br>
-                    <a href="https://sandeshpatel06.github.io/E-learningWeb/" target="_blank">View Live</a>
-                </div>
-                <div class="project-card">
-                    <img src="img/BMI.png" alt="Project 3">
-                    <h2>BMI calculator</h2>
-                    <p>I built a BMI calculator using HTML, CSS, and JavaScript, allowing users to input weight and
-                        height to calculate and display their body mass index.</p>
-                    <a href="https://github.com/sandeshpatel06/BMI-calculator/" target="_blank">View on GitHub</a>
-                    <a href="https://sandeshpatel06.github.io/BMI-calculator/" target="_blank">View Live</a>
-                    
-                </div>
-                <div class="project-card">
-                    <img src="img/Island.png" alt="Project 3">
-                    <h2>BMI calculator</h2>
-                    <p>I developed a website that allows users to book tours, offering various options like
-                        destinations, dates, and preferences, ensuring a personalized and seamless booking
-                        experience.</p>
-                    <a href="https://github.com/sandeshpatel06/Web-design-01/" target="_blank">View on
-                        GitHub</a>
-                        <a href="https://sandeshpatel06.github.io/Web-design-01/tours.html" target="_blank">View Live</a>
-                </div>
-                <!-- <div class="project-card">
-                        <img src="img/BMI.png" alt="Project 3">
-                        <h2>BMI calculator</h2>
-                        <p>I built a BMI calculator using HTML, CSS, and JavaScript, allowing users to input weight and
-                            height to calculate and display their body mass index.</p>
-                            <a href="https://sandeshpatel06.github.io/BMI-calculator/" target="_blank">View on GitHub</a>
-                        </div>
-                    <div class="project-card">
-                        <img src="img/BMI.png" alt="Project 3">
-                        <h2>BMI calculator</h2>
-                        <p>I built a BMI calculator using HTML, CSS, and JavaScript, allowing users to input weight and
-                            height to calculate and display their body mass index.</p>
-                        <a href="https://sandeshpatel06.github.io/BMI-calculator/" target="_blank">View on GitHub</a>
-                    </div> -->
-
-            </div>
-        </section>
-        <!-- Past Experience Section -->
-        <section class="secondsection">
-            <span class="text-gray">Work I Have Done So Far</span>
-            <h1>Past Experience</h1>
-            <div class="box">
-                <div class="vertical">
-                    <img class="img" src="img/html.jpg" alt="HTML">
-                    <div class="vertical-title">LEARNED HTML (APRIL 2024)</div>
-                    <div class="vertical-desc">Gained a strong foundation in HTML, the core language for structuring web
-                        pages.</div>
-                </div>
-                <div class="vertical">
-                    <img class="img" src="img/css.jpg" alt="CSS">
-                    <div class="vertical-title">LEARNED CSS (MAY 2024)</div>
-                    <div class="vertical-desc">Developed skills in styling and designing responsive web pages using CSS.
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="img" src="img/js.jpg" alt="JavaScript">
-                    <div class="vertical-title">BASIC JAVASCRIPT (JUNE 2024)</div>
-                    <div class="vertical-desc">Understood the fundamentals of JavaScript to add interactivity and
-                        dynamic features to websites.</div>
-                </div>
-                <div class="vertical">
-                    <img src="img/py.jpg" class="img" alt="Python">
-                    <div class="vertical-title">BASIC PYTHON (JULY-AUGUST 2024)</div>
-                    <div class="vertical-desc">Learned Python programming, focusing on logic building and
-                        problem-solving techniques.</div>
-                </div>
-                <div class="vertical">
-                    <img src="img/cyber.jpg" class="img" alt="Cybersecurity">
-                    <div class="vertical-title">CYBERSECURITY FUNDAMENTALS (JULY 2024)</div>
-                    <div class="vertical-desc">Gained knowledge of cybersecurity principles, including secure coding and
-                        system protection.</div>
-                </div>
-                <div class="vertical">
-                    <img src="img/next24tech.jpg" class="img" alt="Web Development">
-                    <div class="vertical-title">WEB DEVELOPMENT INTERNSHIP (JULY-SEPT 2024)</div>
-                    <div class="vertical-desc">Completed a hands-on Web Development Internship at <strong>Next24Tech
-                            Technology & Services</strong>,
-                        working on real-world projects and improving front-end and back-end development skills.</div>
-                    <button class="buttons" onclick="showImag()">VIEW CERTIFICATE</button>
-                </div>
-                <div class="vertical">
-                    <img src="img/codetechit.jpg" class="img" alt="Machine Learning">
-                    <div class="vertical-title">MACHINE LEARNING INTERNSHIP (AUG-SEPT 2024)</div>
-                    <div class="vertical-desc">Successfully completed a Machine Learning Internship at <strong>Codetech
-                            IT Solutions</strong>,
-                        where I worked on data analysis, model training, and real-world applications of AI.</div>
-                    <button class="buttons" onclick="showImage('img/nt.jpeg')">VIEW CERTIFICATE</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certificate Modal -->
-        <div id="myModal" class="modal">
-            <span class="close" onclick="closeImage()">&times;</span>
-            <img class="modal-content" id="modalImage" alt="Certificate">
+      <div class="timeline-item">
+        <div class="timeline-date">June 2024</div>
+        <div class="timeline-content">
+          <h3>JavaScript Basics</h3>
+          <p>Learned DOM manipulation, events, and core JS concepts to build dynamic features.</p>
         </div>
+      </div>
 
-        
+      <div class="timeline-item">
+        <div class="timeline-date">July–Aug 2024</div>
+        <div class="timeline-content">
+          <h3>Python Programming</h3>
+          <p>Practiced problem-solving and logic building using Python basics and OOP.</p>
+        </div>
+      </div>
 
+      <div class="timeline-item">
+        <div class="timeline-date">July 2024</div>
+        <div class="timeline-content">
+          <h3>Cybersecurity Fundamentals</h3>
+          <p>Studied secure coding practices and basic system protection methods.</p>
         </div>
-    </main>
-    <hr>
+      </div>
 
-    <!-- Footer -->
-    <!-- <footer>
-        <div class="footer">
-            <div class="footer-first">Sandy's Portfolio Website</div>
-            <div class="footer-second">
-                <ul>
-                    <li><a href="https://www.instagram.com/sandesh_patel007">Instagram</a></li>
-                    <li><a href="https://www.linkedin.com/in/sandesh-patel07">LinkedIn</a></li>
-                    <li><a href="mailto:sandeshpatel.sp.93@gmail.com">Send Email</a></li>
-                    <li><a href="https://github.com/sandeshPatel06">GitHub</a></li>
-                </ul>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-date">July–Sept 2024</div>
+        <div class="timeline-content">
+          <h3>Web Development Internship @ Next24Tech</h3>
+          <p>Worked on frontend and backend projects. Gained hands-on experience in team collaboration and code deployment.</p>
         </div>
-        <div class="footer-rights">
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-            </ul>
-            Copyright &#169; SandeshPortfolioWebsite.com | All rights reserved
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">Aug–Sept 2024</div>
+        <div class="timeline-content">
+          <h3>Machine Learning Internship @ Codetech IT</h3>
+          <p>Explored data preprocessing, model training, and real-world ML applications using Python.</p>
         </div>
-    </footer> -->
-<!-- Footer -->
-<footer>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" class="services-container">
+    <h2>📬 Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="number" name="number" placeholder="Your contact number" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+      <p id="form-status" style="margin-top: 10px;"></p>
+    </form>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
     <div class="footer">
-        <div class="footer-first">Sandy's Portfolio Website</div>
-        <div class="footer-second">
-            <ul>
-                <li><a href="https://www.instagram.com/sandesh_patel007" target="_blank">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/sandesh-patel07" target="_blank">LinkedIn</a></li>
-                <li><a href="mailto:sandeshpatel.sp.93@gmail.com">Send Email</a></li>
-                <li><a href="https://github.com/sandeshPatel06" target="_blank">GitHub</a></li>
-            </ul>
-        </div>
+      <div class="footer-first">Sandy's Portfolio Website</div>
+      <div class="footer-second">
+        <ul>
+          <li><a href="https://www.instagram.com/sandesh_patel007" target="_blank">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/sandesh-patel07" target="_blank">LinkedIn</a></li>
+          <li><a href="mailto:sandeshpatel.sp.93@gmail.com">Email</a></li>
+          <li><a href="https://github.com/sandeshPatel06" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
     </div>
     <div class="footer-rights">
-        <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-        </ul>
-        Copyright &#169; 2025 SandeshPortfolioWebsite.com | All rights reserved
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+      &copy; 2025 SandeshPortfolioWebsite.com | All rights reserved
     </div>
-</footer>
+  </footer>
 
-<!-- Integrated Preferred CSS -->
-
-    <!-- Typed.js for Animated Text -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['web designer.', 'Cybersecurity engineer.', 'photo editor.', 'frontend web developer.'],
-            typeSpeed: 150,
-        });
-    </script>
+  <!-- Scripts -->
+  <!-- ===== Typed.js for Animated Hero Text ===== -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
-
 </html>
